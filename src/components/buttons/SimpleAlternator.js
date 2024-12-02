@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const SimpleAlternator = () => {
 
-    const [text, setText] =  ("No");
+    const [text, setText] = useState("No");
 
     const alternarText = () => {
         if (text === "No") {
