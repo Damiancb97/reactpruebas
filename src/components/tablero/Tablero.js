@@ -1,10 +1,12 @@
+import { Link } from 'react-router-dom';
 import { useState } from "react";
 import "../css/Tablero.css";
 
 const Tablero = (props) => {
+
     const [board, setBoard] = useState(Array(9).fill(null)); // celdas vacías 
     const [isNext, setIsNext] = useState(true); //controla X o O
-    console.log(board);
+
     const handleClick = (index) => {
         const newBoard = board.slice(); //Copia el tablero actual
         if (newBoard[index]) return; //si la celda está ocupada no hace nada
@@ -19,6 +21,7 @@ const Tablero = (props) => {
     }
 
     return <>
+        <Link to="/Games"><button>Atrás</button></Link>
         <ul className="tablero">
             {board.map((value, index) => (
                 <li key={index} onClick={() => handleClick(index)} className="cell">

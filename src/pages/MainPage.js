@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Bienvenida from "../components/Bienvenida";
 import SimpleButton from "../components/buttons/SimpleButton.js";
 import AlternatorButton from "../components/buttons/AlternatorButton.js";
@@ -19,6 +20,9 @@ const MainPage = (props) => {
 
         <h2>Alternador Simple</h2>
         <SimpleAlternator />
+
+        <h2>JUEGOS</h2>
+        <Link to="/Games"><button>Entrar</button></Link>
 
 
 
