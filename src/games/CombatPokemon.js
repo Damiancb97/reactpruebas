@@ -1,6 +1,6 @@
 import PokeList from "../components/pokeapi/PokeList";
 import Pokemon from "../components/pokeapi/Pokemon";
-
+import { Link } from 'react-router-dom';
 
 const CombatPokemon = (props) => {
     const pokeArray = [];
@@ -13,18 +13,18 @@ const CombatPokemon = (props) => {
         }
     }
 
-    const arrayRival = ({ pokeId, pokeRivel }) => {
-        while (newRivalTeam.length < 6) {
-            const randomId = Math.floor(Math.random() * 151) + 1;
-            if (!newRivalTeam.includes(randomId)) {
-                newRivalTeam.push(randomId);
-            }
-        }
-    }
+    // const arrayRival = ({ pokeId, pokeRivel }) => {
+    //     while (newRivalTeam.length < 6) {
+    //         const randomId = Math.floor(Math.random() * 151) + 1;
+    //         if (!newRivalTeam.includes(randomId)) {
+    //             newRivalTeam.push(randomId);
+    //         }
+    //     }
+    // }
 
     return <>
         {/* <Pokemon /> */}
-
+        <Link to="/Games"><button>Atrás</button></Link>
         <PokeList selectPokemon={handleSelect} selectedPokemons={pokeArray} />
 
     </>
